@@ -1,0 +1,30 @@
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.00098 | time : 27.70 | batch : 0/27
+Validation Epoch end... Accuracy : 0.001481616831832952
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.00098 | time : 16.72 | batch : 0/27
+Validation Epoch end... Accuracy : 0.001481616831832952
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.00098 | time : 16.85 | batch : 0/27
+Validation Epoch end... Accuracy : 0.001481616831832952
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.00098 | time : 35.77 | batch : 0/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.00098 | time : 17.14 | batch : 0/27
+Validation Epoch end... Accuracy : 0.001481616831832952
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.00098 | time : 36.88 | batch : 0/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.36523 | time : 388.19 | batch : 100/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.41797 | time : 730.25 | batch : 200/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.43945 | time : 1070.75 | batch : 300/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.44238 | time : 1414.15 | batch : 400/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.45410 | time : 1753.97 | batch : 500/1194
+0 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.46094 | time : 2089.20 | batch : 600/1194
+Train Epoch end... Accuracy : 0.41696842875981094
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.31348 | time : 2137.69 | batch : 0/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.46191 | time : 2159.01 | batch : 10/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.46094 | time : 2178.87 | batch : 20/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.41992 | time : 2196.24 | batch : 30/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.41992 | time : 2213.94 | batch : 40/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.43750 | time : 2228.73 | batch : 50/27
+0 epoch ; acua_toggle_p=0.1_block=-1 | valid_acc : 0.40430 | time : 2241.04 | batch : 60/27
+Validation Epoch end... Accuracy : 0.41884987799162693
+Successfully saved!
+1 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.49219 | time : 2256.86 | batch : 0/1194
+1 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.47168 | time : 2604.94 | batch : 100/1194
+1 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.50977 | time : 2944.13 | batch : 200/1194
+1 epoch ; acua_toggle_p=0.1_block=-1 | train_acc : 0.48145 | time : 3282.12 | batch : 300/1194

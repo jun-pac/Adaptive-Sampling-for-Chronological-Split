@@ -1,0 +1,32 @@
+Generating full feature matrix...
+Copying paper features...
+COPY - Progress... :0/736389| Consumed time :4.863739013671875e-05
+Generating author features...
+GEN_author Progress... 0/2.0| Consumed time :3.504753112792969e-05
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/1134649| time :3.4809112548828125e-05
+SAVE - Sub routine...1000000/1134649| time :0.45296669006347656
+GEN_author Progress... 64/2.0| Consumed time :0.7616925239562988
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/1134649| time :3.600120544433594e-05
+SAVE - Sub routine...1000000/1134649| time :0.3415100574493408
+Generating field features...
+GEN_field Progress... 0/2.0| Consumed time :3.600120544433594e-05
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/59965| time :3.075599670410156e-05
+GEN_field Progress... 64/2.0| Consumed time :0.5315723419189453
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/59965| time :3.075599670410156e-05
+Generating institution features...
+GEN_IN Progress... 0/2.0| Consumed time :4.172325134277344e-05
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/8740| time :4.982948303222656e-05
+GEN_IN Progress... 64/2.0| Consumed time :0.17658448219299316
+get_col_slice
+save_col_slice
+SAVE - Sub routine...0/8740| time :3.4332275390625e-05

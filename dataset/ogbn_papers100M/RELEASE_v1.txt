@@ -1,0 +1,5 @@
+# Release note for ogbn-papers100M
+
+### v1
+
+June, 2020: First major release.

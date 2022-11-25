@@ -1,0 +1,23 @@
+Done! [10.61s]
+Done! [7.08s]
+0 epoch ; acua_DEBUG | valid_acc : 0.05371 | time : 46.08 | batch : 0/27
+Validation Epoch end... Accuracy : 0.04716129547997972
+Done! [7.43s]
+0 epoch ; acua_DEBUG | valid_acc : 0.05371 | time : 48.32 | batch : 0/27
+Validation Epoch end... Accuracy : 0.04716129547997972
+Done! [7.12s]
+0 epoch ; acua_DEBUG | valid_acc : 0.05371 | time : 48.82 | batch : 0/27
+Validation Epoch end... Accuracy : 0.04716129547997972
+0 epoch ; acua_DEBUG | train_acc : 0.00293 | time : 128.54 | batch : 0/1194
+Done! [6.97s]
+0 epoch ; acua_DEBUG | valid_acc : 0.00195 | time : 41.09 | batch : 0/12
+Validation Epoch end... Accuracy : 0.003968399467698547
+0 epoch ; acua_DEBUG | train_acc : 0.00586 | time : 114.80 | batch : 0/614
+0 epoch ; acua_DEBUG | train_acc : 0.05371 | time : 455.70 | batch : 10/614
+0 epoch ; acua_DEBUG | train_acc : 0.12402 | time : 802.81 | batch : 20/614
+Done! [6.82s]
+0 epoch ; acua_DEBUG | valid_acc : 0.00000 | time : 35.75 | batch : 0/12
+Validation Epoch end... Accuracy : 0.0005038186169246365
+0 epoch ; acua_DEBUG | train_acc : 0.00293 | time : 106.24 | batch : 0/614
+0 epoch ; acua_DEBUG | train_acc : 0.03125 | time : 411.85 | batch : 10/614
+0 epoch ; acua_DEBUG | train_acc : 0.06445 | time : 725.44 | batch : 20/614
