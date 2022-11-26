@@ -5,8 +5,7 @@ import os
 import os.path as osp
 import sys
 import time
-from typing import List, NamedTuple, Optional
-sys.path.insert(0,'/users/PAS1289/oiocha/OGB-NeurIPS-Team-Park')    
+from typing import List, NamedTuple, Optional  
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -24,7 +23,7 @@ from tqdm import tqdm
 from multiprocessing import Pool, Process, Array
 
 t0=time.time()
-data_dir="/users/PAS1289/oiocha/Adaptive_Sampling/dataset"
+data_dir="~/Adaptive_Sampling/dataset"
 dataset_name='ogbn-mag'
 num_features=128
 pyg_dataset = PygNodePropPredDataset(name=dataset_name, root=data_dir)
@@ -40,7 +39,7 @@ num_institutions=dataset.num_nodes_dict['institution']
 num_fields=dataset.num_nodes_dict['field_of_study']
 N = (num_papers + num_authors + num_institutions + num_fields)
 
-path ='/users/PAS1289/oiocha/Adaptive_Sampling/dataset/ogbn_mag/mono_adj_t.pt'
+path ='~/Adaptive_Sampling/dataset/ogbn_mag/mono_adj_t.pt'
 
 adj_t = torch.load(path)
 print(f"Done! {time.time()-t0}")
@@ -89,13 +88,13 @@ pool.map(task, range(N)) # This would take 2120s
 
 print(f"first ten relation_ptr(before save) : {relation_ptr[:10]}")
 
-torch.save(relation_ptr, "/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/sampler/mono_relation_ptr.pt")
+torch.save(relation_ptr, "~/Adaptive_Sampling/ogbn-mag/sampler/mono_relation_ptr.pt")
 
 
 '''
 # For debug purpose
 print("Loading relation_ptr...")
-relation_ptr=torch.load("/users/PAS1289/oiocha/OGB-NeurIPS-Team-Park/sampler/relation_ptr.pt")
+relation_ptr=torch.load("~/OGB-NeurIPS-Team-Park/sampler/relation_ptr.pt")
 print(f"Done! {time.time()-t0:.2f}")
 
 print(f"first ten rowptr : {rowptr[:10]}")

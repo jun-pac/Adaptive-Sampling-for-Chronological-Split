@@ -205,7 +205,7 @@ class PygNodePropPredDataset(InMemoryDataset):
         
 
 if __name__ == '__main__':
-    pyg_dataset = PygNodePropPredDataset(name = 'ogbn-papers100M')
+    pyg_dataset = PygNodePropPredDataset(name = 'ogbn-mag')
     print(f"Dataset name : {pyg_dataset.name}")
     print(pyg_dataset[0])
     split_index = pyg_dataset.get_idx_split()
