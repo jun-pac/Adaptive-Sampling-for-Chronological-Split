@@ -5,3 +5,4 @@
 *.pt
 *.npy
 *.npz
+*.ckpt

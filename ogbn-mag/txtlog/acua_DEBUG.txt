@@ -21,3 +21,41 @@ Validation Epoch end... Accuracy : 0.0005038186169246365
 0 epoch ; acua_DEBUG | train_acc : 0.00293 | time : 106.24 | batch : 0/614
 0 epoch ; acua_DEBUG | train_acc : 0.03125 | time : 411.85 | batch : 10/614
 0 epoch ; acua_DEBUG | train_acc : 0.06445 | time : 725.44 | batch : 20/614
+Done! [14.04s]
+acua_DEBUG | test_acc : 0.00000 | time : 23.93 | batch : 0/40
+acua_DEBUG | test_acc : 0.00098 | time : 44.41 | batch : 10/40
+acua_DEBUG | test_acc : 0.00098 | time : 64.07 | batch : 20/40
+acua_DEBUG | test_acc : 0.00195 | time : 79.05 | batch : 30/40
+acua_DEBUG | test_acc : 0.00000 | time : 93.30 | batch : 40/40
+Test Epoch end... Accuracy : 0.0006708680421387776
+Successfully saved!
+Done! [5.58s]
+0 epoch ; acua_DEBUG | valid_acc : 0.00000 | time : 107.31 | batch : 0/12
+Validation Epoch end... Accuracy : 0.0004987537863083378
+Done! [4.97s]
+acua_DEBUG | test_acc : 0.00000 | time : 13.27 | batch : 0/40
+acua_DEBUG | test_acc : 0.00098 | time : 33.78 | batch : 10/40
+acua_DEBUG | test_acc : 0.00098 | time : 53.81 | batch : 20/40
+acua_DEBUG | test_acc : 0.00195 | time : 68.44 | batch : 30/40
+acua_DEBUG | test_acc : 0.00000 | time : 82.94 | batch : 40/40
+Test Epoch end... Accuracy : 0.0006708680421387776
+Successfully saved!
+Done! [5.32s]
+0 epoch ; acua_DEBUG | valid_acc : 0.00000 | time : 96.30 | batch : 0/12
+Validation Epoch end... Accuracy : 0.0004987537863083378
+Done! [5.01s]
+acua_DEBUG | test_acc : 0.00000 | time : 13.09 | batch : 0/40
+acua_DEBUG | test_acc : 0.00098 | time : 33.19 | batch : 10/40
+acua_DEBUG | test_acc : 0.00098 | time : 51.87 | batch : 20/40
+acua_DEBUG | test_acc : 0.00195 | time : 66.67 | batch : 30/40
+acua_DEBUG | test_acc : 0.00000 | time : 80.89 | batch : 40/40
+Test Epoch end... Accuracy : 0.0006708680421387776
+Successfully saved!
+Done! [5.29s]
+0 epoch ; acua_DEBUG | valid_acc : 0.00000 | time : 94.90 | batch : 0/12
+Validation Epoch end... Accuracy : 0.0004987537863083378
+acua_DEBUG | test_acc : 0.00000 | time : 107.30 | batch : 0/40
+acua_DEBUG | test_acc : 0.00098 | time : 128.65 | batch : 10/40
+acua_DEBUG | test_acc : 0.00098 | time : 147.49 | batch : 20/40
+acua_DEBUG | test_acc : 0.00195 | time : 162.70 | batch : 30/40
+acua_DEBUG | test_acc : 0.00000 | time : 176.86 | batch : 40/40

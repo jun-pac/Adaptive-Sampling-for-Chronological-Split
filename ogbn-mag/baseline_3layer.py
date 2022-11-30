@@ -376,8 +376,6 @@ class RGNN(LightningModule):
         self.batch_idx=batch_idx
         self.log('val_acc', tmp_acc, on_step=False, on_epoch=True,prog_bar=True, sync_dist=True)
         if((args.debug and batch_idx%10==0) or batch_idx%30==0):
-            if(args.debug):
-                print(f"VAL debug... batch_idx : {batch_idx} | len(datamodule.valid_idx): {len(datamodule.valid_idx)} | args.cross_partition_number : {args.cross_partition_number} | args.batch_size : {args.batch_size}")
             print(f"{self.current_epoch} epoch ; {name[1:]} | valid_acc : {tmp_acc:.5f} | time : {time.time()-t0:.2f} | batch : {batch_idx}/{len(datamodule.valid_idx)//args.cross_partition_number//args.batch_size}")
             f_log.write(f"{self.current_epoch} epoch ; {name[1:]} | valid_acc : {tmp_acc:.5f} | time : {time.time()-t0:.2f} | batch : {batch_idx}/{len(datamodule.valid_idx)//args.cross_partition_number//args.batch_size}\n")
             f_log.flush()
@@ -426,7 +424,6 @@ class RGNN(LightningModule):
             self.test_step(batch, test_batch_idx)
         self.test_epoch_end(1)
 
-
     def test_epoch_end(self, outputs) -> None:
         print("Test Epoch end... Accuracy : "+str(self.test_acc_sum/self.test_cnt))
         f_log.write("Test Epoch end... Accuracy : "+str(self.test_acc_sum/self.test_cnt))
@@ -472,36 +469,12 @@ if __name__ == '__main__':
     # Must specify seed everytime.
     # Batchsize, N_source need to be precisely selected, but don't change it for now.
 
-    # DEBUG
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=1 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=mono --cross_partition_number=1 --hidden_channels=1024
-
     # MAIN
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=5 --cross_partition_idx=0
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.1/lightning_logs/version_13327070/checkpoints/epoch=25-step=30963.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.2 --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.2/lightning_logs/version_13326552/checkpoints/epoch=24-step=29874.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.05 --cross_partition_number=5 --cross_partition_idx=0  --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.05/lightning_logs/version_13342427/checkpoints/epoch=25-step=30377.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.0 --cross_partition_number=5 --cross_partition_idx=0
-    
-
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --label_disturb_p=0.2
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_LARGE_p=0.1_block=-1/lightning_logs/version_13872911/checkpoints/epoch=20-step=12914.ckpt
-
-    # Submission
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=1 
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=2
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=3
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=4
+    # python Adaptive_Sampling/ogbn-mag/baseline_3layer.py --link=toggle --cross_partition_number=1 --hidden_channels=512 --ckpt=/users/PAS1289/oiocha/logs/acua3_toggle_p=0.1_block=-1_batch=1024_hidden=512/lightning_logs/version_13857790/checkpoints/epoch=12-step=7994.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_3layer.py --link=toggle --cross_partition_number=1 --hidden_channels=1024
 
     # TEST
     # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --evaluate --label_disturb_p=0.0 --time_disturb_p=0.0 --batch_size=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.1_batch=1024/lightning_logs/version_13082877/checkpoints/epoch=34-step=38044.ckpt
-
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.2 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.3 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.25 --hidden_channels=1024
-
     
     t0=time.time()
     args = parser.parse_args()
@@ -509,12 +482,8 @@ if __name__ == '__main__':
 
     seed_everything(args.random_seed)
     #sizes=[[40,10,0,10],[15,10,5,5]] # Default behavior
-    #sizes=[[40,20,0,20],[20,15,5,10]] # LARGE
-    sizes=[[60,30,0,30],[40,25,10,15]] # SUPER_LARGE
-    #sizes=[[60,30,0,30],[30,30,30,30]] # TRULY_LARGE
-    #sizes=[[100,50,0,50],[40,30,20,30]] # ULTRA_LARGE
-
-    #sizes=[[4,2,0,2],[2,2,1,1]] # SMALL
+    sizes=[[40,10,0,15],[10,10,5,10],[4,4,4,4]] # for hidden=512 version
+    #sizes=[[40,10,0,15],[10,10,5,10],[2,2,2,2]]
 
     import pytorch_lightning as pl
     if args.debug:
@@ -523,13 +492,13 @@ if __name__ == '__main__':
 
     # Initialize log directory
     if args.debug:
-        name=f'/acua_DEBUG'
+        name=f'/acua3_DEBUG'
     elif args.ckpt!=None:
         name='/'+args.ckpt.split('/')[5]
     elif args.hidden_channels==1024 and args.batch_size==1024:
-        name=f'/acua_{args.link}_SUPER_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}'
+        name=f'/acua3_{args.link}_p={args.label_disturb_p}_block={args.cross_partition_idx}'
     else:
-        name=f'/acua_{args.link}_SUPER_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}_batch={args.batch_size}_hidden={args.hidden_channels}'
+        name=f'/acua3_{args.link}_p={args.label_disturb_p}_block={args.cross_partition_idx}_batch={args.batch_size}_hidden={args.hidden_channels}'
     print(f"Name : {name}")
 
     
@@ -583,7 +552,9 @@ if __name__ == '__main__':
             print(f"AFTER model.optimizers() : {trainer.optimizers}")
             print(f"model.global_step : {model.global_step}")
             print(f"model.current_epoch : {model.current_epoch}")
-        
+
+        if(args.debug):
+            trainer.test(model,datamodule=datamodule)
         trainer.fit(model, datamodule=datamodule)
     
     # Evaluate

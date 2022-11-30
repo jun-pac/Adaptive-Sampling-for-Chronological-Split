@@ -1,0 +1,108 @@
+0 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.00000 | time : 44.84 | batch : 0/12
+Validation Epoch end... Accuracy : 0.0
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.00098 | time : 118.44 | batch : 0/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.34473 | time : 1974.39 | batch : 100/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.40820 | time : 3807.19 | batch : 200/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.45605 | time : 5639.28 | batch : 300/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.42383 | time : 7469.40 | batch : 400/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.43848 | time : 9295.33 | batch : 500/614
+0 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.49316 | time : 11095.59 | batch : 600/614
+Train Epoch end... Accuracy : 0.40114445145863914
+0 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.34668 | time : 11340.02 | batch : 0/12
+0 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.40430 | time : 11632.52 | batch : 30/12
+0 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.42188 | time : 11876.33 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4239417196197049
+Successfully saved!
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.46484 | time : 11934.37 | batch : 0/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.48340 | time : 13775.96 | batch : 100/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.45996 | time : 15612.40 | batch : 200/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.49902 | time : 17444.03 | batch : 300/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.48926 | time : 19285.15 | batch : 400/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.47363 | time : 21114.11 | batch : 500/614
+1 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.50586 | time : 22932.51 | batch : 600/614
+Train Epoch end... Accuracy : 0.4799502721962414
+1 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.31934 | time : 23178.73 | batch : 0/12
+1 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.41309 | time : 23471.56 | batch : 30/12
+1 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.42090 | time : 23714.83 | batch : 60/12
+Validation Epoch end... Accuracy : 0.42719687976442783
+Successfully saved!
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51367 | time : 23782.11 | batch : 0/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51953 | time : 25632.08 | batch : 100/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51855 | time : 27478.73 | batch : 200/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.47168 | time : 29316.57 | batch : 300/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.50879 | time : 31171.05 | batch : 400/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.49414 | time : 33022.26 | batch : 500/614
+2 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51172 | time : 34862.27 | batch : 600/614
+Train Epoch end... Accuracy : 0.5013828433605028
+2 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.32812 | time : 35112.73 | batch : 0/12
+2 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.43555 | time : 35405.40 | batch : 30/12
+2 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.44922 | time : 35648.36 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4498293243810766
+Successfully saved!
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.49512 | time : 35706.75 | batch : 0/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52539 | time : 37582.92 | batch : 100/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52734 | time : 39457.29 | batch : 200/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.47266 | time : 41332.29 | batch : 300/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51660 | time : 43204.76 | batch : 400/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51367 | time : 45082.37 | batch : 500/614
+3 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.50293 | time : 46953.15 | batch : 600/614
+Train Epoch end... Accuracy : 0.5114738750800599
+3 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.36230 | time : 47208.34 | batch : 0/12
+3 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.46191 | time : 47499.11 | batch : 30/12
+3 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.47070 | time : 47743.44 | batch : 60/12
+Validation Epoch end... Accuracy : 0.472219754462047
+Successfully saved!
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52832 | time : 47802.42 | batch : 0/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.49414 | time : 49685.40 | batch : 100/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51367 | time : 51575.60 | batch : 200/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51270 | time : 53471.19 | batch : 300/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52148 | time : 55359.41 | batch : 400/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51953 | time : 57263.71 | batch : 500/614
+4 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52832 | time : 59130.53 | batch : 600/614
+Train Epoch end... Accuracy : 0.5201604339721706
+4 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.36035 | time : 59383.82 | batch : 0/12
+4 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.45801 | time : 59676.33 | batch : 30/12
+4 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.49707 | time : 59920.81 | batch : 60/12
+Validation Epoch end... Accuracy : 0.47794110861297034
+Successfully saved!
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52344 | time : 59980.32 | batch : 0/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.50098 | time : 61877.78 | batch : 100/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52637 | time : 63781.26 | batch : 200/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52441 | time : 65677.87 | batch : 300/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53418 | time : 67581.14 | batch : 400/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53027 | time : 69494.73 | batch : 500/614
+5 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53809 | time : 71376.46 | batch : 600/614
+Train Epoch end... Accuracy : 0.5274730050357302
+5 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.34863 | time : 71631.30 | batch : 0/12
+5 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.47656 | time : 71924.67 | batch : 30/12
+5 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.48730 | time : 72168.70 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4778709126796413
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.55273 | time : 72227.11 | batch : 0/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.54395 | time : 74140.36 | batch : 100/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.54102 | time : 76054.80 | batch : 200/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53125 | time : 77971.02 | batch : 300/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53906 | time : 79887.54 | batch : 400/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.50586 | time : 81804.23 | batch : 500/614
+6 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.54102 | time : 83682.15 | batch : 600/614
+Train Epoch end... Accuracy : 0.5310678751552715
+6 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.35938 | time : 83936.74 | batch : 0/12
+6 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.48340 | time : 84229.24 | batch : 30/12
+6 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.50586 | time : 84473.03 | batch : 60/12
+Validation Epoch end... Accuracy : 0.486191031785525
+Successfully saved!
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.53418 | time : 84534.38 | batch : 0/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51660 | time : 86448.61 | batch : 100/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.54883 | time : 88345.69 | batch : 200/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.56543 | time : 90238.30 | batch : 300/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.54492 | time : 92121.55 | batch : 400/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.56348 | time : 94020.07 | batch : 500/614
+7 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.55957 | time : 95893.21 | batch : 600/614
+Train Epoch end... Accuracy : 0.5357787644693875
+7 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.36914 | time : 96147.25 | batch : 0/12
+7 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.46387 | time : 96439.61 | batch : 30/12
+7 epoch ; acua3_toggle_p=0.1_block=-1 | valid_acc : 0.47559 | time : 96685.09 | batch : 60/12
+Validation Epoch end... Accuracy : 0.48274159589033766
+8 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.51270 | time : 96743.48 | batch : 0/614
+8 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.56055 | time : 98651.83 | batch : 100/614
+8 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.52051 | time : 100554.37 | batch : 200/614
+8 epoch ; acua3_toggle_p=0.1_block=-1 | train_acc : 0.55664 | time : 102466.81 | batch : 300/614
