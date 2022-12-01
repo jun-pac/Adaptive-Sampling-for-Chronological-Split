@@ -167,7 +167,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_train,
                                batch_size=self.batch_size, shuffle=True,
-                               num_workers=10, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
+                               num_workers=40, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
         else:
             relation_ptr = self.mono_relation_ptr if (args.link=='mono') else self.relation_ptr
             adj_t = self.mono_adj_t if (args.link=='mono') else self.adj_t
@@ -175,7 +175,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_train,
                                batch_size=self.batch_size, shuffle=True,
-                               num_workers=10, relation_ptr=relation_ptr)
+                               num_workers=40, relation_ptr=relation_ptr)
 
     def val_dataloader(self):
         if args.link=='toggle':
@@ -183,7 +183,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size,
-                               num_workers=10, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
+                               num_workers=40, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
         else:
             relation_ptr = self.mono_relation_ptr if (args.link=='mono') else self.relation_ptr
             adj_t = self.mono_adj_t if (args.link=='mono') else self.adj_t
@@ -191,7 +191,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size, 
-                               num_workers=10, relation_ptr=relation_ptr)
+                               num_workers=40, relation_ptr=relation_ptr)
 
     def test_dataloader(self):
         if args.link=='toggle':
@@ -199,7 +199,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size,
-                               num_workers=10, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
+                               num_workers=40, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
         else:
             relation_ptr = self.mono_relation_ptr if (args.link=='mono') else self.relation_ptr
             adj_t = self.mono_adj_t if (args.link=='mono') else self.adj_t
@@ -207,7 +207,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size, 
-                               num_workers=10, relation_ptr=relation_ptr)
+                               num_workers=40, relation_ptr=relation_ptr)
 
     def hidden_test_dataloader(self): # This is test-dev. Not test-challenge
         if args.link=='toggle':
@@ -215,7 +215,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size,
-                               num_workers=10, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
+                               num_workers=40, mono_relation_ptr=self.mono_relation_ptr, relation_ptr=self.relation_ptr)
         else:
             relation_ptr = self.mono_relation_ptr if (args.link=='mono') else self.relation_ptr
             adj_t = self.mono_adj_t if (args.link=='mono') else self.adj_t
@@ -223,7 +223,7 @@ class MAG240M(LightningDataModule):
                                sizes=self.sizes, return_e_id=False,
                                transform=self.convert_batch_test,
                                batch_size=self.batch_size, 
-                               num_workers=10, relation_ptr=relation_ptr)
+                               num_workers=40, relation_ptr=relation_ptr)
     
     def convert_batch_train(self, batch_size, n_id, adjs):
         x = self.x[n_id]
@@ -423,9 +423,8 @@ class RGNN(LightningModule):
         # Also get test accuracy
         test_data_loader=datamodule.test_dataloader()
         for test_batch_idx, batch in enumerate(test_data_loader):
-            self.test_step(batch, test_batch_idx)
+            self.test_step(batch.to(device), test_batch_idx)
         self.test_epoch_end(1)
-
 
     def test_epoch_end(self, outputs) -> None:
         print("Test Epoch end... Accuracy : "+str(self.test_acc_sum/self.test_cnt))
@@ -473,36 +472,35 @@ if __name__ == '__main__':
     # Batchsize, N_source need to be precisely selected, but don't change it for now.
 
     # DEBUG
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=1 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=mono --cross_partition_number=1 --hidden_channels=1024
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --hidden_channels=1024
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=1 --hidden_channels=1024
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=mono --cross_partition_number=1 --hidden_channels=1024
 
     # MAIN
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=5 --cross_partition_idx=0
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.1/lightning_logs/version_13327070/checkpoints/epoch=25-step=30963.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.2 --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.2/lightning_logs/version_13326552/checkpoints/epoch=24-step=29874.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.05 --cross_partition_number=5 --cross_partition_idx=0  --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.05/lightning_logs/version_13342427/checkpoints/epoch=25-step=30377.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.0 --cross_partition_number=5 --cross_partition_idx=0
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=5 --cross_partition_idx=0
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.1/lightning_logs/version_13327070/checkpoints/epoch=25-step=30963.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --label_disturb_p=0.2 --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.2/lightning_logs/version_13326552/checkpoints/epoch=24-step=29874.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --label_disturb_p=0.05 --cross_partition_number=5 --cross_partition_idx=0  --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.05/lightning_logs/version_13342427/checkpoints/epoch=25-step=30377.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --label_disturb_p=0.0 --cross_partition_number=5 --cross_partition_idx=0
     
 
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --label_disturb_p=0.2
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_LARGE_p=0.1_block=-1/lightning_logs/version_13872911/checkpoints/epoch=20-step=12914.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --label_disturb_p=0.2
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_LARGE_p=0.1_block=-1/lightning_logs/version_13872911/checkpoints/epoch=20-step=12914.ckpt
 
     # Submission
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=1 
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=2
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=3
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=4
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=0
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=1 
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=2
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=3
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=full --cross_partition_number=5 --cross_partition_idx=4
 
     # TEST
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --evaluate --label_disturb_p=0.0 --time_disturb_p=0.0 --batch_size=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.1_batch=1024/lightning_logs/version_13082877/checkpoints/epoch=34-step=38044.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --evaluate --label_disturb_p=0.0 --time_disturb_p=0.0 --batch_size=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.1_batch=1024/lightning_logs/version_13082877/checkpoints/epoch=34-step=38044.ckpt
 
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.2 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.3 --hidden_channels=1024
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.25 --hidden_channels=1024
-
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.2 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_SUPER_LARGE_p=0.2_block=-1/lightning_logs/version_13892525/checkpoints/epoch=25-step=15989.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.2 --hidden_channels=1024
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.25 --hidden_channels=1024
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.3 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_TRULY_LARGE_p=0.3_block=-1/lightning_logs/version_13923250/checkpoints/epoch=3-step=2459.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua_GPU.py --link=toggle --cross_partition_number=1 --label_disturb_p=0.4 --hidden_channels=1024 --ckpt=/users/PAS1289/oiocha/logs/acua_toggle_LARGE_p=0.4_block=-1/lightning_logs/version_13923149/checkpoints/epoch=4-step=3074.ckpt
     
     t0=time.time()
     args = parser.parse_args()
@@ -510,9 +508,9 @@ if __name__ == '__main__':
 
     seed_everything(args.random_seed)
     #sizes=[[40,10,0,10],[15,10,5,5]] # Default behavior
-    #sizes=[[40,20,0,20],[20,15,5,10]] # LARGE
+    sizes=[[40,20,0,20],[20,15,5,10]] # LARGE
     #sizes=[[60,30,0,30],[40,25,10,15]] # SUPER_LARGE
-    sizes=[[60,30,0,30],[30,30,30,30]] # TRULY_LARGE
+    #sizes=[[60,30,0,30],[30,30,30,30]] # TRULY_LARGE
     #sizes=[[100,50,0,50],[40,30,20,30]] # ULTRA_LARGE
 
     #sizes=[[4,2,0,2],[2,2,1,1]] # SMALL
@@ -524,13 +522,13 @@ if __name__ == '__main__':
 
     # Initialize log directory
     if args.debug:
-        name=f'/acua_DEBUG'
+        name=f'/acua_GPU_DEBUG'
     elif args.ckpt!=None:
         name='/'+args.ckpt.split('/')[5]
     elif args.hidden_channels==1024 and args.batch_size==1024:
-        name=f'/acua_{args.link}_TRULY_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}'
+        name=f'/acua_{args.link}_SUPER_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}'
     else:
-        name=f'/acua_{args.link}_TRULY_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}_batch={args.batch_size}_hidden={args.hidden_channels}'
+        name=f'/acua_{args.link}_SUPER_LARGE_p={args.label_disturb_p}_block={args.cross_partition_idx}_batch={args.batch_size}_hidden={args.hidden_channels}'
     print(f"Name : {name}")
 
     
@@ -550,9 +548,10 @@ if __name__ == '__main__':
     # Dataloader
     datamodule = MAG240M(ROOT, args.batch_size, sizes, args.in_memory, args.label_disturb_p, args.time_disturb_p, args.bit)
 
+    device = f'cuda:{args.device}' if torch.cuda.is_available() else 'cpu'
+    print("Device :",device)
+
     if not args.evaluate:
-        device = f'cuda:{args.device}' if torch.cuda.is_available() else 'cpu'
-        print("Device :",device)
         
         if args.ckpt != None:
             checkpoint = torch.load(args.ckpt)
@@ -571,12 +570,12 @@ if __name__ == '__main__':
         # tensorboard --logdir=/users/PAS1289/oiocha/logs/rgat/lightning_logs
 
         if args.ckpt != None:
-            trainer = Trainer(max_epochs=args.epochs,
+            trainer = Trainer(gpus=args.device, max_epochs=args.epochs,
                             callbacks=[checkpoint_callback],
                             default_root_dir='logs'+name,
                             progress_bar_refresh_rate=0, resume_from_checkpoint=args.ckpt)
         else:
-            trainer = Trainer(max_epochs=args.epochs,
+            trainer = Trainer(gpus=args.device, max_epochs=args.epochs,
                             callbacks=[checkpoint_callback],
                             default_root_dir='logs'+name,
                             progress_bar_refresh_rate=0)
@@ -592,7 +591,7 @@ if __name__ == '__main__':
         device = f'cuda:{args.device}' if torch.cuda.is_available() else 'cpu'
         # Ignore previous code
         ckpt=args.ckpt
-        trainer = Trainer(resume_from_checkpoint=ckpt,
+        trainer = Trainer(gpus=args.device, resume_from_checkpoint=ckpt,
                           progress_bar_refresh_rate=0) # gpus=args.device,
         
         model = RGNN.load_from_checkpoint(args.ckpt)

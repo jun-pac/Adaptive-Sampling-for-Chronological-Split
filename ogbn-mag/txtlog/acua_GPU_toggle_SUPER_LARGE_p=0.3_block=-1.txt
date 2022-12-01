@@ -1,0 +1,122 @@
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.00195 | time : 27.32 | batch : 0/12
+Validation Epoch end... Accuracy : 0.001953125
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.00195 | time : 25.31 | batch : 0/12
+Validation Epoch end... Accuracy : 0.001953125
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.00684 | time : 72.76 | batch : 0/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.00195 | time : 27.44 | batch : 0/12
+Validation Epoch end... Accuracy : 0.001953125
+Test Epoch end... Accuracy : 0.0018196769478869388
+Successfully saved!
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.00586 | time : 156.93 | batch : 0/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.39551 | time : 368.50 | batch : 100/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.00195 | time : 33.03 | batch : 0/12
+Validation Epoch end... Accuracy : 0.001953125
+Test Epoch end... Accuracy : 0.0019165812911337194
+Successfully saved!
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.00586 | time : 129.00 | batch : 0/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.38379 | time : 220.10 | batch : 100/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.40332 | time : 301.13 | batch : 200/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.40234 | time : 382.89 | batch : 300/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.43555 | time : 465.03 | batch : 400/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.46582 | time : 547.20 | batch : 500/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48145 | time : 629.32 | batch : 600/614
+Train Epoch end... Accuracy : 0.407640653026249
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.32520 | time : 662.65 | batch : 0/12
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.43164 | time : 682.53 | batch : 30/12
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.39844 | time : 700.57 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4241608335857763
+Successfully saved!
+Test Epoch end... Accuracy : 0.4100697790588952
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.45703 | time : 781.99 | batch : 0/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48633 | time : 874.12 | batch : 100/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48535 | time : 955.44 | batch : 200/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50391 | time : 1037.58 | batch : 300/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.49023 | time : 1119.65 | batch : 400/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48633 | time : 1202.19 | batch : 500/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.47949 | time : 1284.18 | batch : 600/614
+Train Epoch end... Accuracy : 0.48486552653366694
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.38184 | time : 1318.31 | batch : 0/12
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.49414 | time : 1337.09 | batch : 30/12
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.50000 | time : 1355.10 | batch : 60/12
+Validation Epoch end... Accuracy : 0.49197545580218327
+Successfully saved!
+Test Epoch end... Accuracy : 0.4740057465182335
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52051 | time : 1438.55 | batch : 0/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.51758 | time : 1529.88 | batch : 100/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.46777 | time : 1611.62 | batch : 200/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.51855 | time : 1693.03 | batch : 300/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48633 | time : 1775.06 | batch : 400/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48926 | time : 1857.20 | batch : 500/614
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48145 | time : 1939.52 | batch : 600/614
+Train Epoch end... Accuracy : 0.5055300367884293
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.36816 | time : 1973.73 | batch : 0/12
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.47559 | time : 1992.03 | batch : 30/12
+2 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.47461 | time : 2009.33 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4797699487412928
+Test Epoch end... Accuracy : 0.46560010741578817
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50977 | time : 2085.24 | batch : 0/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50195 | time : 2175.92 | batch : 100/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52734 | time : 2257.86 | batch : 200/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50781 | time : 2339.52 | batch : 300/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.49707 | time : 2421.60 | batch : 400/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.55469 | time : 2504.08 | batch : 500/614
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.51074 | time : 2585.34 | batch : 600/614
+Train Epoch end... Accuracy : 0.517466792694143
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.34375 | time : 2618.00 | batch : 0/12
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.45898 | time : 2637.29 | batch : 30/12
+3 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.44238 | time : 2655.23 | batch : 60/12
+Validation Epoch end... Accuracy : 0.46010118962340774
+Test Epoch end... Accuracy : 0.44704461025583525
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50781 | time : 2734.12 | batch : 0/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52441 | time : 2824.99 | batch : 100/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52832 | time : 2906.16 | batch : 200/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50488 | time : 2987.95 | batch : 300/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52539 | time : 3070.41 | batch : 400/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.53711 | time : 3152.87 | batch : 500/614
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.49609 | time : 3235.28 | batch : 600/614
+Train Epoch end... Accuracy : 0.526317405477809
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.37695 | time : 3269.54 | batch : 0/12
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.49414 | time : 3290.04 | batch : 30/12
+4 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.51270 | time : 3307.47 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4976777068089227
+Successfully saved!
+Test Epoch end... Accuracy : 0.4829447402512202
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.54395 | time : 3387.11 | batch : 0/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52051 | time : 3477.95 | batch : 100/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52734 | time : 3559.33 | batch : 200/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.52832 | time : 3640.92 | batch : 300/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.53320 | time : 3722.50 | batch : 400/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.53809 | time : 3804.81 | batch : 500/614
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.53809 | time : 3887.20 | batch : 600/614
+Train Epoch end... Accuracy : 0.5327860806946636
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.38086 | time : 3921.92 | batch : 0/12
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.49902 | time : 3940.82 | batch : 30/12
+5 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.51270 | time : 3958.90 | batch : 60/12
+Validation Epoch end... Accuracy : 0.5024592831054456
+Successfully saved!
+Test Epoch end... Accuracy : 0.48648523261895094
+6 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.53809 | time : 4043.55 | batch : 0/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.00195 | time : 33.44 | batch : 0/12
+Validation Epoch end... Accuracy : 0.001953125
+Test Epoch end... Accuracy : 0.0018910632441807974
+Successfully saved!
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.00586 | time : 133.97 | batch : 0/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.38281 | time : 216.32 | batch : 100/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.39453 | time : 296.23 | batch : 200/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.40332 | time : 377.03 | batch : 300/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.44238 | time : 458.29 | batch : 400/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.46582 | time : 539.83 | batch : 500/614
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50391 | time : 620.63 | batch : 600/614
+Train Epoch end... Accuracy : 0.40853507838304176
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.33691 | time : 656.57 | batch : 0/12
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.44336 | time : 674.98 | batch : 30/12
+0 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | valid_acc : 0.42480 | time : 692.27 | batch : 60/12
+Validation Epoch end... Accuracy : 0.4361051952140775
+Successfully saved!
+Test Epoch end... Accuracy : 0.42623437922942237
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48828 | time : 778.39 | batch : 0/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48535 | time : 861.83 | batch : 100/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.48145 | time : 942.08 | batch : 200/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.49414 | time : 1022.87 | batch : 300/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.49512 | time : 1104.28 | batch : 400/614
+1 epoch ; acua_GPU_toggle_SUPER_LARGE_p=0.3_block=-1 | train_acc : 0.50488 | time : 1185.74 | batch : 500/614
