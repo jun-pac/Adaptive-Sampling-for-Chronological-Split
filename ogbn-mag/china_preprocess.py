@@ -6,7 +6,7 @@ import os.path as osp
 import sys
 import time
 from typing import List, NamedTuple, Optional
-sys.path.insert(0,'/users/PAS1289/oiocha/OGB-NeurIPS-Team-Park')    
+sys.path.insert(0,'~/OGB-NeurIPS-Team-Park')    
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -25,7 +25,7 @@ from multiprocessing import Pool, Process, Array
 
 t0=time.time()
 
-data_dir="/users/PAS1289/oiocha/Adaptive_Sampling/dataset"
+data_dir="~/Adaptive_Sampling/dataset"
 dataset_name='ogbn-mag'
 num_features=128
 pyg_dataset = PygNodePropPredDataset(name=dataset_name, root=data_dir)
@@ -85,4 +85,4 @@ pool.map(task, range(N)) # This would take 2120s
 
 print(f"first ten relation_ptr(before save) : {relation_ptr[:10]}")
 
-torch.save(relation_ptr, "/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/sampler/bi_relation_ptr.pt")
+torch.save(relation_ptr, "~/Adaptive_Sampling/ogbn-mag/sampler/bi_relation_ptr.pt")

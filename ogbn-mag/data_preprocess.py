@@ -5,7 +5,7 @@ import os.path as osp
 import sys
 import time
 from typing import List, NamedTuple, Optional
-sys.path.append('/users/PAS1289/oiocha/Adaptive_Sampling')  
+sys.path.append('~/Adaptive_Sampling')  
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -21,7 +21,7 @@ from torch_geometric.nn import GATConv, SAGEConv
 from torch_sparse import SparseTensor
 from tqdm import tqdm
 
-data_dir="/users/PAS1289/oiocha/Adaptive_Sampling/dataset"
+data_dir="~/Adaptive_Sampling/dataset"
 dataset_name='ogbn-mag'
 num_features=128
 pyg_dataset = PygNodePropPredDataset(name=dataset_name, root=data_dir)

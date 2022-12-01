@@ -26,7 +26,7 @@ from sampler.sample_china import NeighborSampler as NS_china
 from sampler.sample_toggle import NeighborSampler as NS_toggle
 # Must be always in_memory setup
 
-ROOT="/users/PAS1289/oiocha/Adaptive_Sampling/dataset"
+ROOT="~/Adaptive_Sampling/dataset"
 
 class Batch(NamedTuple):
     x: Tensor
@@ -126,17 +126,17 @@ class MAG240M(LightningDataModule):
         if args.debug:
             print(f"self.y.shape : {self.y.shape}")
         
-        path_mono='/users/PAS1289/oiocha/Adaptive_Sampling/dataset/ogbn_mag/mono_adj_t.pt'
-        path_full='/users/PAS1289/oiocha/Adaptive_Sampling/dataset/ogbn_mag/full_adj_t.pt'
+        path_mono='~/Adaptive_Sampling/dataset/ogbn_mag/mono_adj_t.pt'
+        path_full='~/Adaptive_Sampling/dataset/ogbn_mag/full_adj_t.pt'
         if(args.link!='full'):
             self.mono_adj_t = torch.load(path_mono)
         if(args.link!='mono'):
             self.adj_t = torch.load(path_full)
 
         if(args.link!='full'):
-            self.mono_relation_ptr=torch.load('/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/sampler/mono_relation_ptr.pt')
+            self.mono_relation_ptr=torch.load('~/Adaptive_Sampling/ogbn-mag/sampler/mono_relation_ptr.pt')
         if(args.link!='mono'):
-            self.relation_ptr=torch.load('/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/sampler/bi_relation_ptr.pt')
+            self.relation_ptr=torch.load('~/Adaptive_Sampling/ogbn-mag/sampler/bi_relation_ptr.pt')
 
         one_hot_encoding = np.eye(self.num_classes)[[int(x) for x in self.train_label]].astype(np.float16)
         self.one_hot_dict={}
@@ -410,7 +410,7 @@ class RGNN(LightningModule):
         if self.batch_idx>=3 and self.val_acc_sum/self.val_cnt>self.max_val_acc:
             self.max_val_acc=self.val_acc_sum/self.val_cnt
             self.val_res=np.concatenate(self.val_res)
-            np.save(f'/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/val_activation'+name, self.val_res)
+            np.save(f'~/Adaptive_Sampling/ogbn-mag/val_activation'+name, self.val_res)
             print("Successfully saved!")
             f_log.write("Successfully saved!\n")
         
@@ -434,7 +434,7 @@ class RGNN(LightningModule):
         if self.test_acc_sum/self.test_cnt>self.max_val_acc:
             self.max_val_acc=self.test_acc_sum/self.test_cnt
             self.test_res=np.concatenate(self.test_res)
-            np.save(f'/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/test_activation'+name, self.test_res)
+            np.save(f'~/Adaptive_Sampling/ogbn-mag/test_activation'+name, self.test_res)
             print("Successfully saved!")
             f_log.write("Successfully saved!\n")
         f_log.flush()
@@ -479,9 +479,9 @@ if __name__ == '__main__':
 
     # MAIN
     # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=toggle --cross_partition_number=5 --cross_partition_idx=0
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.1/lightning_logs/version_13327070/checkpoints/epoch=25-step=30963.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.2 --cross_partition_number=5 --cross_partition_idx=0 --ckpt=/users/PAS1289/oiocha/logs/acua_p=0.2/lightning_logs/version_13326552/checkpoints/epoch=24-step=29874.ckpt
-    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.05 --cross_partition_number=5 --cross_partition_idx=0  --ckpt=/users/PAS1289/oiocha/logs/acua_full_p=0.05/lightning_logs/version_13342427/checkpoints/epoch=25-step=30377.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --cross_partition_number=5 --cross_partition_idx=0 --ckpt=~/logs/acua_full_p=0.1/lightning_logs/version_13327070/checkpoints/epoch=25-step=30963.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.2 --cross_partition_number=5 --cross_partition_idx=0 --ckpt=~/logs/acua_p=0.2/lightning_logs/version_13326552/checkpoints/epoch=24-step=29874.ckpt
+    # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.05 --cross_partition_number=5 --cross_partition_idx=0  --ckpt=~/logs/acua_full_p=0.05/lightning_logs/version_13342427/checkpoints/epoch=25-step=30377.ckpt
     # python Adaptive_Sampling/ogbn-mag/baseline_acua.py --link=full --label_disturb_p=0.0 --cross_partition_number=5 --cross_partition_idx=0
     
 
@@ -539,7 +539,7 @@ if __name__ == '__main__':
     else:
         args.cross_partition_number=5
     
-    NROOT='/users/PAS1289/oiocha/Adaptive_Sampling/ogbn-mag/txtlog' # log file's root.
+    NROOT='~/Adaptive_Sampling/ogbn-mag/txtlog' # log file's root.
     path_log = NROOT+name+'.txt'
     f_log=open(path_log,'a')
     if args.ckpt!=None:
@@ -568,7 +568,7 @@ if __name__ == '__main__':
         
         print(f'#Params {sum([p.numel() for p in model.parameters()])}')
         checkpoint_callback = ModelCheckpoint(monitor='val_acc', mode='max',save_top_k=3)
-        # tensorboard --logdir=/users/PAS1289/oiocha/logs/rgat/lightning_logs
+        # tensorboard --logdir=~/logs/rgat/lightning_logs
 
         if args.ckpt != None:
             trainer = Trainer(max_epochs=args.epochs,
